@@ -1,0 +1,14 @@
+s=>start: User would like to use the application
+e=>end: User is authenticated
+e2=>end: User is not authenticated
+
+o1=>operation: User logs in with email and password
+c1=>condition: Email is valid?
+c2=>condition: Password is valid?
+io1=>inputoutput: Username or password is invalid, notify user
+
+s->o1->c1
+c1(yes)->c2
+c1(no)->io1->e2
+c2(yes)->e
+c2(no)->io1->e2

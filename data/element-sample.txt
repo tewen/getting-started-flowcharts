@@ -1,0 +1,11 @@
+start=>start
+end=>end
+
+operation=>operation: Operation Example
+subroutine=>subroutine: Subroutine Example
+condition=>condition: True or False?
+inputoutput=>inputoutput: Input output example
+
+start->operation->condition
+condition(yes)->subroutine->end
+condition(no)->inputoutput->end

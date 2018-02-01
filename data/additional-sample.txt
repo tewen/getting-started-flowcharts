@@ -1,0 +1,17 @@
+st=>start: I wan't to go out with 4 friends
+cond1=>condition: Vegans?
+cond2=>condition: Vegetarians?
+cond3=>condition: Kosher?
+e1=>end: Veggie Sushi
+e2=>end: Pizza
+e3=>end: Oysters
+e4=>end: Sarge's Deli (Open 24 Hours)
+io1=>inputoutput: Argue about best option
+
+st->cond1
+cond1(yes)->e1
+cond1(no)->cond2
+cond2(yes)->e2
+cond2(no)->cond3
+cond3(yes)->io1->e4
+cond3(no)->e3
